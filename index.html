@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!----------      mo dau      -------->
+    <div class="trang">
+        <div class="trang1">
+
+            <!----------      radio      -------->
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
+            <input type="radio" name="radio-btn" id="radio8">
+            <input type="radio" name="radio-btn" id="radio9">
+            <input type="radio" name="radio-btn" id="radio10">
+            <input type="radio" name="radio-btn" id="radio11">
+
+
+            <!----------      img      -------->
+
+            <div class="trang-t first">
+                <img src="anh/anh1.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh2.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh3.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh4.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh5.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh6.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh7.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh8.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh9.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh10.jpg" alt="">
+            </div>
+            <div class="trang-t">
+                <img src="anh/anh11.jpg" alt="">
+            </div>
+
+            <!----------      chuyen anh      -------->
+
+            <div class="auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+                <div class="auto-btn8"></div>
+                <div class="auto-btn9"></div>
+                <div class="auto-btn10"></div>
+                <div class="auto-btn11"></div>
+            </div>
+        </div>
+
+        <!----------      chuyen anh for radio      -------->
+        <div class="to-radio">
+            <label for="radio1" class="to-radio-btn"></label>
+            <label for="radio2" class="to-radio-btn"></label>
+            <label for="radio3" class="to-radio-btn"></label>
+            <label for="radio4" class="to-radio-btn"></label>
+            <label for="radio5" class="to-radio-btn"></label>
+            <label for="radio6" class="to-radio-btn"></label>
+            <label for="radio7" class="to-radio-btn"></label>
+            <label for="radio8" class="to-radio-btn"></label>
+            <label for="radio9" class="to-radio-btn"></label>
+            <label for="radio10" class="to-radio-btn"></label>
+            <label for="radio11" class="to-radio-btn"></label>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="box">
+            <p>Hê lô cô bé Hoàng Phương Dương hay Trọng còn gọi là ngiuuuuuuuuu! 
+                Woa biết gì không hôm nay là ngày ra đời của một thiên thần đó
+                Thiên thần sẽ hiện ra khi e click vào nút dưới kia nha. A chúc e bé iu của 
+                Trọng tuối mới mạnh khỏe, học giỏi, vui vẻ hơn, mãi đỉnh mãi đỉnh em 
+                bé nhó. Em bé tuổi mới phải thật vui vẻ này không suy nghĩ tiêu cực nữa 
+                và đặc biệt phải giữ gìn sức khỏe thật tốt ăn uống đầy đủ, không nhịn
+                bữa. Anh xin phép không đề cập đến vấn đề những lần làm e bé bùn nha
+                vì hôm nay sinh nhật bé mà phải vui chứ. Ô biết gì chưa? Lần thứ 2 a 
+                được ở bên bé vào dịp sinh nhật này, mà có gì phải shock nhỉ? A bên cạnh
+                bé cả đời mà sau còn có cả hồng hài nhi nữa chứ :))))))))))))))))))))). 
+                Anh biết là em muốn vào dịp sinh nhật này a sẽ viết thư cho em
+                đọc nhưng mà a nghĩ viết thư thì không đặc biệt bằng cái này đâu, nên là
+                anh làm cái này cho em nè. Em bé có thít hong?
+            </p>
+            <button id="Hong" style="width: 80px; height: 35px; font-size: 16px; background: aqua; border: 1px solid rgb(0, 0, 0); border-radius: 10px;">Hong</button>
+            <button onclick="thit(event)" style="width: 100px; height: 35px; font-size: 16px; background: aqua; border: 1px solid rgb(0, 0, 0); border-radius: 10px;">Em thít lắm</button>
+        </div>
+    </div>
+
+    <script> 
+        var dem = 1;
+        setInterval(function(){
+            document.getElementById('radio' + dem).checked = true;
+            dem++;
+            if (dem > 12) {
+                dem=1;
+            }
+        }, 3000);
+
+        document.getElementById('Hong').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+
+        function thit(event) {
+        event.preventDefault();
+        const overlay = document.getElementById("overlay");
+        overlay.style.display = (overlay.style.display === "flex") ? "none" : "flex";
+    }     
+    </script>
+</body>
+</html>
+
